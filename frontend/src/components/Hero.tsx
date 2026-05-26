@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 
+const TELEGRAM_URL =
+  process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/aiteam";
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (delay = 0) => ({
@@ -12,11 +15,6 @@ const fadeUp = {
 };
 
 export default function Hero() {
-  const telegramUrl =
-    typeof window !== "undefined"
-      ? process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/aiteam"
-      : "https://t.me/aiteam";
-
   return (
     <section
       id="hero"
@@ -72,7 +70,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto"
         >
           <a
-            href={telegramUrl}
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-primary text-headline font-semibold text-base hover:brightness-110 transition-all duration-200 shadow-[0_0_24px_rgba(59,130,246,0.4)] hover:shadow-[0_0_32px_rgba(59,130,246,0.6)]"
