@@ -20,7 +20,6 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background px-6"
     >
-      {/* Blue radial glow — center/left */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
@@ -29,7 +28,6 @@ export default function Hero() {
             "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(59,130,246,0.18) 0%, transparent 70%)",
         }}
       />
-      {/* Secondary softer glow offset to left */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2"
@@ -41,9 +39,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto gap-6">
-        {/* Headline */}
         <motion.h1
           custom={0}
           initial="hidden"
@@ -55,7 +51,6 @@ export default function Hero() {
           <span className="text-primary">Không cần thuê dev.</span>
         </motion.h1>
 
-        {/* Subheadline */}
         <motion.p
           custom={0.15}
           initial="hidden"
@@ -67,7 +62,6 @@ export default function Hero() {
           sản phẩm của bạn. Không cần quản lý, không cần sprint.
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           custom={0.3}
           initial="hidden"
